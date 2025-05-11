@@ -206,7 +206,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>© 2024 IYOYO 网站，保留所有权利。</p>
+        <p>&copy; <span id="year"></span>  IYOYO. All rights reserved.</p>
     </footer>
 
     <!-- 实时更新 JavaScript -->
@@ -234,6 +234,9 @@
         // 初始化并定时更新
         setInterval(updateClockAndDate, 1000);
         updateClockAndDate();
+
+        // Set the current year in the footer
+        document.getElementById("year").textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
